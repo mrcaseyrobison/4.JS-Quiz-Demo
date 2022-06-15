@@ -1,0 +1,76 @@
+body {
+    background-image: url(./images/winter.jpeg);
+    background-size:cover;
+}
+
+h1 {
+    margin: auto;
+    text-align: center;
+    padding: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+  
+}
+
+#option-1 {
+    display: flex;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    color:white;
+    background-image: url(./images/black_concrete.jpeg);
+
+}
+
+#option-2 {
+    display: flex;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    width: 100%;
+    height: 25%;
+    color:white;
+    background-image: url(./images/black_concrete.jpeg);
+
+}
+
+#option-3 {
+    display: flex;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    width: 100%;
+    height: 25%;
+    color:white;
+    background-image: url(./images/black_concrete.jpeg);
+
+}
+
+#option-4 {
+    display: flex;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    width: 100%;
+    height: 25%;
+    color:white;
+    background-image: url(./images/black_concrete.jpeg);
+
+}
+
