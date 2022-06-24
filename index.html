@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
-    <title>Quiz with JavaScript!</title>
+    <title>Javascript Quiz!</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 <body>
-    <h1 id="question">PLACEHOLDER</h1>
-    <div class="container">
-        <div id="option-1">Option 1</div>
-        <div id="option-2">Option 2</div>
-        <div id="option-3">Option 3</div>
-        <div id="option-4">Option 4</div>
+    <div id="nav">
+        <a id="highscores" href="scores.html">View Highscores</a>
+        <div class="timer"></div>
     </div>
-    <h2 id="timer">PLACEHOLDER</h2>
-
+    <div class="container">
+        <div id="startBox">
+            <h1>Java Script Quiz!</h1>
+            <p>Answer all 5 Java Script questions within the time alloted. 
+            <br>Incorrect questions will result in a 5 second penalty!</p>
+            <button id="gameStart">Start Quiz</button>
+            <div>
+        <div class="container">
+            <ul id="question"></ul>
+            <ul id="answers"></ul>
+       
+        </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
