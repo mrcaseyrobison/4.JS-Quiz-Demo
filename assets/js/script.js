@@ -3,52 +3,52 @@ var score = 0;
 var questionsIndex = 0;
 
 // Time Clock Variables
-var startTime = 120;
+var startTime = 120; 
 var pauseInterval = 0;
 var timeDeduct = 5;
 
 // HTML Elements
-var timerEl = document.getElementById("timer");
-var timeLeftEl = document.getElementById("timeLeft");
-var quizBoxEl = document.getElementById("quizBox"); // links to "quizBox" ID in HTML
-var gameContentEl = document.getElementById("gameContent"); // links to "gameContent" ID in HTML
-var createUl = document.createElement("ul"); // creates unordered list element in HTML
+const timerEl = document.getElementById("timer"); // timer display in HTML
+const timeLeftEl = document.getElementById("timeLeft"); // time remaining display in HTML
+const quizBoxEl = document.getElementById("quizBox"); // links to "quizBox" ID in HTML
+const gameContentEl = document.getElementById("gameContent"); // links to "gameContent" ID in HTML
+const createUl = document.createElement("ul"); // creates unordered list element in HTML
 
 // Questions Array
-var gameQuestions = [
+const gameQuestions = [
   {
-    question: "Question 1",
-    choices: ["A. Answer 1", "B. Answer 2", "C. Answer 3", "D. Answer 4"],
-    answer: "A. Answer 1",
+    question: "What HTML element link a .JS to an HTML file?",
+    choices: ["A. <script>", "B. <div>", "C. <style>", "D. <head>"],
+    answer: "A. <script>",
   },
   {
-    question: "Question 1",
-    choices: ["A. Answer 1", "B. Answer 2", "C. Answer 3", "D. Answer 4"],
-    answer: "D. Answer 4",
+    question: "What does DOM mean?",
+    choices: ["A. Do Open Menu", "B. Don't Open Me", "C. Document Object Menu", "D. Document Object Model"],
+    answer: "D. Document Object Model",
   },
   {
-    question: "Question 1",
-    choices: ["A. Answer 1", "B. Answer 2", "C. Answer 3", "D. Answer 4"],
-    answer: "B. Answer 2",
+    question: "How do you add a comment to JavaScript",
+    choices: ["A. <!--This is a comment-->", "B. //This is a comment", "C. `This is a comment", "D. *This is a comment*"],
+    answer: "B. //This is a comment",
   },
   {
-    question: "Question 1",
-    choices: ["A. Answer 1", "B. Answer 2", "C. Answer 3", "D. Answer 4"],
-    answer: "C. Answer 3",
+    question: "How do you create a function in JavaScript?",
+    choices: ["A. function = myFunction()", "B. function: myFunction()", "C. function myFunction()", "D. create.function = (function)"],
+    answer: "C. function myFunction()",
   },
   {
-    question: "Question 1",
-    choices: ["A. Answer 1", "B. Answer 2", "C. Answer 3", "D. Answer 4"],
-    answer: "B. Answer 2",
+    question: "How do you write an IF statement in JavaScript?",
+    choices: ["A. if i = 5", "B. if (i == 5)", "C. if i = 5 then", "D. if i = x (then)"],
+    answer: "B. if (i == 5)",
   },
   {
-    question: "Question 1",
-    choices: ["A. Answer 1", "B. Answer 2", "C. Answer 3", "D. Answer 4"],
-    answer: "A. Answer 1",
+    question: "How do you declare a JavaScript variable?",
+    choices: ["A. var myVariable", "B. variable myVariable", "C. create.var myVariable", "D. append.var = myVariable"],
+    answer: "A. var myVariable",
   },
 ];
 
-// Event Listener to start the timer and start game
+// Event Listener to start the timer and begin game
 timerEl.addEventListener("click", function () {
   if (pauseInterval === 0) {
     pauseInterval = setInterval(function () {
@@ -78,7 +78,7 @@ function displayQuiz(questionsIndex) {
     listItem.textContent = nextQuestion;
     quizBoxEl.appendChild(createUl);
     createUl.appendChild(listItem);
-    listItem.addEventListener("click", compare);
+    listItem.addEventListener("click", (compare));
   });
 }
 
@@ -100,7 +100,7 @@ function compare(event) {
     }
   }
   questionsIndex++;
-  if (questionIndex >= gameQuestions.length) {
+  if (questionsIndex >= gameQuestions.length) {
     endGame();
   } else {
     displayQuiz(questionsIndex);
