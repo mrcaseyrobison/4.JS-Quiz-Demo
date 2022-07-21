@@ -28,8 +28,8 @@ timerEl.addEventListener("click", function() {
       }, 1000);
   }
   displayQuiz(questionsIndex)
-}
-)
+});
+
 // Questions Array
 var gameQuestions = [
   {
@@ -81,6 +81,32 @@ function displayQuiz(questions) {
     listItem.addEventListener("click", (compare));
   })
 };
+
+function compare(event) {  
+  var element = event.target;
+  if (element.matches("li")) {
+    var createDiv = document.createElement("div");
+    createDiv.id ="createDiv";
+    if (element.textContent == gameQuestions[questionsIndex].answer) {
+      score++;
+      createDiv.textContent = "Correct!  " + gameQuestions[questionsIndex].answer;
+    } else {
+      startTime = startTime - timeDeduct;
+      createDiv.textContent = "Incorrect! The correct answer is:  " +
+      gameQuestions[questionsIndex].answer;
+    }}
+    questionsIndex++;
+    if (questionIndex >= gameQuestions.length) {
+      finished();
+    } else {
+      displayQuiz(questionsIndex);
+    }
+    quizBoxEl.appendChild(createDiv);
+    }
+  
+
+  
+
 
 
 
