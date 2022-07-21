@@ -112,36 +112,36 @@ function compare(event) {
 function endGame() {
   quizBoxEl.innerHTML = "";
   timeLeftEl.innerHTML = "";
-  var createH1 = document.createElement("h1");
+  const createH1 = document.createElement("h1");
   createH1.id = "createH1";
   createH1.textContent = "All Done!"
   quizBoxEl.appendChild(createH1);
-  var createP = document.createElement("p");
+  const createP = document.createElement("p");
   createP.id = "createP";
   quizBoxEl.appendChild(createP);
 
   // Calculates time remaining, correct questions and score
   if (startTime >= 0) {
       var timeRemaining = startTime;
-      var createP2 = document.createElement("p");
+      const createP2 = document.createElement("p");
       clearInterval(pauseInterval);
       createP.textContent = "Your score is: " + timeRemaining * 2;
-      questionsContainer.appendChild(createP2);
+      quizBoxEl.appendChild(createP2);
   }
-  var infoPrompt = document.createElement("label");
+  const infoPrompt = document.createElement("label");
   infoPrompt.id = "createLabel";
   infoPrompt.textContent = "Enter your initials: ";
-  questionsContainer.appendChild(infoPrompt);
+  quizBoxEl.appendChild(infoPrompt);
 
   // Input initials
-  var userInitials = document.createElement("input");
+  const userInitials = document.createElement("input");
   userInitials.type = "text";
   userInitials.id = "initials";
   userInitials.textContent = "";
-  questionsContainer.appendChild(userInitials);
+  quizBoxEl.appendChild(userInitials);
 
   // Submit score and initials
-  var saveInfo = document.createElement("button");
+  const saveInfo = document.createElement("button");
   saveInfo.type = "submit";
   saveInfo.id = "Submit";
   saveInfo.textContent = "Submit";
