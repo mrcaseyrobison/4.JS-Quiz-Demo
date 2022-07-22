@@ -37,8 +37,23 @@ body {
 #quizBox ul li:hover {
     color: white;
     background-color: pink;
+    cursor: pointer;
 }
 
+#timer {
+    margin: 5%;
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    border-radius: 25px 25px;
+    font-family:'Roboto Mono', monospace;
+    font-size: 85%;
+}
+
+#timer:hover {
+    background-color: pink;
+    cursor: pointer;
+}
 #timeLeft {
     float: right;
 }
@@ -55,6 +70,7 @@ button#Submit {
 
 button#Submit:hover {
     background-color: pink;
+    cursor: pointer;
 }
 
 li#myScore {
@@ -73,6 +89,10 @@ button#gameReset {
     float: left;
 }
 
+button#gameReset:hover {
+    cursor: pointer;
+}
+
 button#clearScores {
     margin: 5%;
     width: 200px;
@@ -81,4 +101,8 @@ button#clearScores {
     border-radius: 25px 25px;
     font-family:'Roboto Mono', monospace;
     font-size: 85%;
+}
+
+button#clearScores {
+    cursor: pointer;
 }
