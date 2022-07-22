@@ -3,7 +3,7 @@ var score = 0;
 var questionsIndex = 0;
 
 // Time Clock Variables
-var startTime = 120; 
+var startTime = 60; 
 var pauseInterval = 0;
 var timeDeduct = 5;
 
@@ -53,7 +53,7 @@ timerEl.addEventListener("click", function () {
   if (pauseInterval === 0) {
     pauseInterval = setInterval(function () {
       startTime--;
-      timeLeftEl.textContent = "Time: " + startTime;
+      timeLeftEl.textContent = "Time: " + startTime + " Seconds Remaining";
       if (startTime <= 0) {
         clearInterval(pauseInterval);
         finished();
@@ -102,6 +102,7 @@ function compare(event) {
   questionsIndex++;
   if (questionsIndex >= gameQuestions.length) {
     endGame();
+    $("createDiv").hide();
   } else {
     displayQuiz(questionsIndex);
   }
@@ -171,3 +172,4 @@ function endGame() {
       }
   })
 };
+
