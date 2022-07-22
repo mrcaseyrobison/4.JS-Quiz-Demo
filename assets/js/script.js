@@ -114,7 +114,7 @@ function endGame() {
   timeLeftEl.innerHTML = "";
   const createH1 = document.createElement("h1");
   createH1.id = "createH1";
-  createH1.textContent = "All Done!"
+  createH1.textContent = "Game Over!"
   quizBoxEl.appendChild(createH1);
   const createP = document.createElement("p");
   createP.id = "createP";
